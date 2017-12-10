@@ -1911,7 +1911,11 @@ class ch1lvl55Scene: SKScene, SKPhysicsContactDelegate {
             
         }
         if Brick.name == "brick63" {
-            
+            if brickLives[62] == 20 {
+                
+            } else if brickLives[62] == 19 {
+                
+            }
         }
         if Brick.name == "brick64" {
             if brickLives[63] == 20 {
