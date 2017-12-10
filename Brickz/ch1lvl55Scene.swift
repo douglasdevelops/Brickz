@@ -253,6 +253,7 @@ class ch1lvl55Scene: SKScene, SKPhysicsContactDelegate {
         ball.physicsBody?.isDynamic = true
         ball.physicsBody?.affectedByGravity = false
         ball.physicsBody?.friction = 0
+        ball.physicsBody?.allowsRotation = true
         ball.physicsBody?.restitution = 1
         ball.physicsBody?.categoryBitMask = PhysicsCategory.Ball
         ball.physicsBody?.collisionBitMask = PhysicsCategory.Paddle | PhysicsCategory.Ball | PhysicsCategory.Barrier | PhysicsCategory.Brick
@@ -1972,11 +1973,11 @@ class ch1lvl55Scene: SKScene, SKPhysicsContactDelegate {
                 brick64.texture = ubTextureH1
             } else if brickLives[63] == 1 {
                 brickCount -= 1
-                brick.removeFromParent()
-                Explosion.position = brick.position
-                self.addChild(Explosion)
+                brick64.removeFromParent()
+                ubExplosion.position = brick64.position
+                self.addChild(ubExplosion)
                 self.run(explosionWait, completion: {
-                    Explosion.removeFromParent()
+                    ubExplosion.removeFromParent()
                 })
             }
         }

@@ -204,6 +204,7 @@ class TitleScene: SKScene, SKPhysicsContactDelegate {
         ball.physicsBody?.affectedByGravity = false
         ball.physicsBody?.friction = 0
         ball.physicsBody?.restitution = 1
+        ball.physicsBody?.allowsRotation = true
         ball.physicsBody?.categoryBitMask = PhysicsCategory.Ball
         ball.physicsBody?.collisionBitMask = PhysicsCategory.Paddle | PhysicsCategory.Ball | PhysicsCategory.Barrier
         ball.physicsBody?.contactTestBitMask = PhysicsCategory.Paddle | PhysicsCategory.Ball | PhysicsCategory.Barrier
